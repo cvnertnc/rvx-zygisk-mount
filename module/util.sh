@@ -8,7 +8,7 @@ is_valid_rvmm() {
 }
 
 collect_rvmm() {
-	for RVMM in /data/adb/modules_update/*-jhc*; do
+	for RVMM in /data/adb/modules_update/*-cvnertnc*; do
 		if ! is_valid_rvmm "$RVMM"; then continue; fi
 
 		MPATH=$(echo "$RVMM" | sed 's/modules_update/modules/')
@@ -17,7 +17,7 @@ collect_rvmm() {
 		echo "$RVMM"
 	done
 
-	for RVMM in /data/adb/modules/*-jhc*; do
+	for RVMM in /data/adb/modules/*-cvnertnc*; do
 		if ! is_valid_rvmm "$RVMM"; then continue; fi
 		if [ -f "$MPATH/remove" ]; then continue; fi
 
